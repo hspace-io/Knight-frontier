@@ -47,10 +47,10 @@ compose_file: pwn-challenge/prob/for_organizer/docker-compose.yml #문제 도커
 
 ```
 # 출제자
-- 홍길동
+- 나이츠
 
 # 컨셉
-- ROP, LLL, ~~ Attack
+- ROP, Tcache Poisoning (중요한 기법 및 컨셉 표기)
 
 # 풀이
 ROP 기법을 사용하는 문제.
