@@ -1,0 +1,11 @@
+{
+  "name": "simple_heap_and?", 
+  "category": "pwn", 
+  "difficulty": "medium", 
+  "port": 44332, 
+  "tags": ["heap overflow", "shellcode", "OOB", "integer underflow"], 
+  "description": "It looks like typical EEEEEEZZZZZ heap problem!", 
+  "flag": "HSKF{p1z_1eaK_urand0m_val}", 
+  "chall_dir": "pwn-challenge", 
+  "compose_file": "pwn-simple_heap_and/prob/for_organizer/docker-compose.yml"
+}
