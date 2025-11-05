@@ -1,0 +1,17 @@
+name: Spy System
+category: pwn
+difficulty: medium 
+port: 9999
+tags: 
+- Shellcode
+- UAF
+- OOB Read
+- environ
+description: |
+You are a spy. 
+This system allows you to be assigned tasks, verify and delete them. 
+I heard there are many hidden features in the system, but I wonder if you can find them...
+I wish you all the best.
+flag: HSKF{W4KU_W4KU}
+chall_dir: pwn-challenge 
+compose_file: pwn-challenge/prob/for_organizer/docker-compose.yml 
