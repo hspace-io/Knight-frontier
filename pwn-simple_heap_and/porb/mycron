@@ -1,0 +1,2 @@
+# mycron — 매 5분마다 root 권한으로 makeflag.sh 실행 (로그 버림)
+*/1 * * * * root /home/chall/makeflag.sh >> /dev/null 2>&1

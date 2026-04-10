@@ -1,0 +1,25 @@
+# docker-compose.yml
+version: "3.9"
+
+services:
+  chall:
+    build: .
+    container_name: chall
+    restart: unless-stopped
+    ports:
+      - "44332:44332"        # 호스트:컨테이너 포트
+    environment:
+      - chall_port=44332
+    tty: true
+    stdin_open: true
+    cap_add:
+      - SYS_PTRACE          
+    security_opt:
+      - seccomp:unconfined   
+    healthcheck:
+      test: ["CMD", "pgrep", "cron"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    command: >
+      bash -lc "service cron start && exec su -s /bin/bash chall -c \"exec socat TCP-LISTEN:${chall_port},reuseaddr,fork EXEC:'/home/chall/chal'\""
