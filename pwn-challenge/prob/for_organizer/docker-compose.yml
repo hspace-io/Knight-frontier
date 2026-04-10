@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  pwn-challenge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9999:9999"
+    environment:
+      - chall_port=9999
+      - user=prob
+    restart: unless-stopped
